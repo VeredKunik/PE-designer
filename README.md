@@ -19,9 +19,11 @@ Prime editing tools that consist of a reverse transcriptase linked with Cas9 nic
 Usage:
 =====
 
-With no CPU's allocated:
-pedesigner -m <mm> --pbs\_min <pbs_min> --pbs\_max <pbs_max> --rtt\_min <rtt_min> --rtt\_max <rtt_max> --use\_cpus <ref.fa> <edit.fa> <PAM> <genome.fa>
+* With no CPU's allocated:
 
-With CPU's allocated (e.g.; cluster, snakemake etc): 
-pedesigner -m <mm> --pbs\_min <pbs_min> --pbs\_max <pbs_max> --rtt\_min <rtt_min> --rtt\_max <rtt_max> <ref.fa> <edit.fa> <PAM> <genome.fa>
+`pedesigner -m <mm> --pbs_min <pbs_min> --pbs_max <pbs_max> --rtt_min <rtt_min> --rtt_max <rtt_max> --use_cpus <ref.fa> <edit.fa> <PAM> <genome.fa>`
+
+* With CPU's allocated (e.g.; cluster, snakemake etc): 
+
+`pedesigner -m <mm> --pbs_min <pbs_min> --pbs_max <pbs_max> --rtt_min <rtt_min> --rtt_max <rtt_max> <ref.fa> <edit.fa> <PAM> <genome.fa>`
 

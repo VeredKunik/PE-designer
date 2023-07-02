@@ -27,6 +27,8 @@ requirements:
     {% endfor %}
 
 test:
+  imports:
+    - pedesigner
   commands:
     - pedesigner --help
 

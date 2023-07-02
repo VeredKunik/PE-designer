@@ -25,3 +25,8 @@ Usage:
 
 `pedesigner -m <mm> --pbs_min <pbs_min> --pbs_max <pbs_max> --rtt_min <rtt_min> --rtt_max <rtt_max> <ref.fa> <edit.fa> <PAM> <genome.fa>`
 
+Installation:
+============
+
+mamba install -c vered.kunik pedesigner
+

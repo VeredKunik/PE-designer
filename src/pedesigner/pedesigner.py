@@ -4,7 +4,7 @@ import sys
 import time
 from subprocess import PIPE, Popen
 
-from pedesigner import needle
+from pedesigner.needle import needle
 
 
 def rev_comp(s):

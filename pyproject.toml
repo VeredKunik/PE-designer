@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=45"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pedesigner"
+version = "0.2.0"
+authors = [
+    {name = "Vered Kunik", email = "vered.kunik@gmail.com"},
+]
+description="A tool for prime-editing guideRNA (pegRNA) design"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords=["prime-editing", "guideRNA", "pegRNA", "bioinformatics"]
+license = {text = "GPL3"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Development Status :: 4 - Beta  ",
+    "Environment :: Console",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    'cas-offinder',
+]
+
+[project.scripts]
+pedesigner = "pedesigner.pedesigner:main"
+
+[project.urls]
+homepage = "https://github.com/VeredKunik/pedesigner"
+

@@ -1,0 +1,35 @@
+{% set pyproject = load_file_data('pyproject.toml', from_recipe_dir=True, recipe_dir='.') %}
+{% set proj = pyproject.get('project') %}
+{% set scripts = pyproject.get('project', {}).get('scripts') %}
+
+package:
+  name: pedesigner
+  version: {{ proj.get('version') }}
+
+source:
+  path: .
+
+build:
+  number: 0
+  noarch: python
+  entry_points:
+    {% for ep in scripts %}
+      - {{ ep }} = {{ scripts[ep] }} 
+    {% endfor %}
+
+requirements:
+  build:
+    - python {{ proj.get('requires-python') }}
+  run:
+    - python {{ proj.get('requires-python') }}
+    {% for dep in proj.get('dependencies') %}
+    - {{ dep }}
+    {% endfor %}
+
+test:
+  commands:
+    - pedesigner --help
+
+about:
+  summary: {{ proj.get('description') }}
+  license: {{ proj.get('license').get('text') }}

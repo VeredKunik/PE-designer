@@ -28,5 +28,5 @@ Usage:
 Installation:
 ============
 
-mamba install -c vered.kunik pedesigner
+mamba install -c bioconda pedesigner
 
